@@ -1,0 +1,10 @@
+import cv2
+image = cv2.imread("image/googlemap.png")
+greyImage = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.imshow('orginal', image)
+cv2.imshow('Gray', greyImage)
+cv2.imwrite("grayphoto.jpg", greyImage)
+cv2.waitKey(0)       
+cv2.destroyAllWindows()
+print(image.shape)
+print(image.size)
